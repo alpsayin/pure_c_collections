@@ -1,0 +1,9 @@
+/.clang-format
+/.vscode
+/build
+/cmake_install.cmake
+*Makefile
+*CMakeFiles/
+CMakeCache.txt
+*.exe
+*.a

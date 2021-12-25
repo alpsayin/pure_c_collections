@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.15)
+
+
+include(settoolchain.cmake)
+cmake_language(CALL auto_set_toolchain)
+
+project(pure_c_utils)
+
+message("!!! Project Name " ${PROJECT_NAME})
+
+add_subdirectory(argalparser)
+add_subdirectory(c_arraylist)
+add_subdirectory(c_linkedlist)
+
+include_directories(include)
+
+add_executable(${PROJECT_NAME} 
+                main.cpp 
+                )
+
+target_link_libraries(${PROJECT_NAME} PUBLIC argalparser)
+target_link_libraries(${PROJECT_NAME} PUBLIC c_arraylist)
+target_link_libraries(${PROJECT_NAME} PUBLIC c_linkedlist)
+
+# TODO: for some reason cmake generates correct files only on second run
