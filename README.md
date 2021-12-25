@@ -3,7 +3,7 @@
 Finally I decided implement the most common collections that I myself usually need. All implementations support "objects". APIs are not necessarily consistent. Implementations are not necessarily efficient for large lists. 
 
  - Arraylist: a preallocated fixed size list
- - Linkedlist: good old linkedlist
+ - Linkedlist: good old double linked linkedlist which can be used as a stack &| queue
 
 ### TODO:
  - Set: based on the linkedlist implementation (i.e. no hashmap)
